@@ -1,0 +1,36 @@
+{
+  "name": "js-task-1-memoize",
+  "version": "1.0.0",
+  "description": "js task 1 for epam training center",
+  "main": "memoize.js",
+  "dependencies": {
+    "jest": "^26.6.3",
+    "prettier": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "eslint": "eslint src",
+    "prettier": "prettier --write src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yomche/js-task-1-memoize.git"
+  },
+  "author": "Ekaterina Smirnova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yomche/js-task-1-memoize/issues"
+  },
+  "homepage": "https://github.com/yomche/js-task-1-memoize#readme"
+}
