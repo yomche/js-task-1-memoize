@@ -3,14 +3,14 @@ function memoize(inFunc) {
         return undefined;
     }
     const cache = {};
-    return function outFunc(n) {
-        const key = JSON.stringify(n);
-        if (cache[key] === undefined) {
-            const result = inFunc.call(this, n);
-            cache[key] = result;
-            return result;
+    return function outFunc(...args) {
+        const key = JSON.stringify(args);
+        if (cache[key] !== undefined) {
+            return cache[key];
         }
-        return cache[key];
+        const result = inFunc.apply(this, args);
+        cache[key] = result;
+        return result;
     };
 }
 

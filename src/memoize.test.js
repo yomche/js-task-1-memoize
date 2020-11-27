@@ -19,7 +19,7 @@ describe('it should', () => {
 describe('it should not', () => {
     let count = 0;
     // eslint-disable-next-line no-unused-vars
-    function incrementCount(value) {
+    function incrementCount(...value) {
         // eslint-disable-next-line no-plusplus
         return ++count;
     }
@@ -31,10 +31,10 @@ describe('it should not', () => {
     });
 
     test('be called twice with the same arguments', () => {
-        expect(memoizedIncrementCounter(15)).toEqual(1);
-        expect(memoizedIncrementCounter(15)).toEqual(1);
-        expect(memoizedIncrementCounter(5)).toEqual(2);
-        expect(memoizedIncrementCounter(10)).toEqual(3);
-        expect(memoizedIncrementCounter(5)).toEqual(2);
+        expect(memoizedIncrementCounter(15, 18)).toEqual(1);
+        expect(memoizedIncrementCounter(15, 18)).toEqual(1);
+        expect(memoizedIncrementCounter(5, 50)).toEqual(2);
+        expect(memoizedIncrementCounter(10, 100)).toEqual(3);
+        expect(memoizedIncrementCounter(5, 50)).toEqual(2);
     });
 });
